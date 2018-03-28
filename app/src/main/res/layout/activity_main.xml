@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.assignment.etho.MainActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <RelativeLayout
+        android:id="@+id/clickable_destination"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFF">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/dest_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            app:srcCompat="@drawable/mapbox_mylocation_icon_default" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            android:textStyle="bold"
+            android:id="@+id/destiation_text"
+            android:layout_toRightOf="@id/dest_image"
+            android:fontFamily="@font/ubuntu_light"
+            android:text="Enter Destination"
+            android:textColor="#000" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:text="START NAVIGATION"
+        android:visibility="gone"
+        android:id="@+id/nav_button"
+        android:textColor="#FFF"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/retry"
+        android:visibility="gone"
+        android:background="@drawable/circle_retry"
+        android:layout_gravity="center"
+        app:srcCompat="@android:drawable/stat_notify_sync_noanim" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/loader"
+        android:visibility="gone"/>
+
+
+</FrameLayout>

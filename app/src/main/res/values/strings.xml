@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Etho</string>
+    <string name="app_token">ENTER APP TOKEN</string>
+    <string name="API_KEY">ENTER API KEY</string>
+</resources>
